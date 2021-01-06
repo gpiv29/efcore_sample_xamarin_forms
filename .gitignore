@@ -1,0 +1,21 @@
+# Visual Studio cache
+.vs/
+.vscode/
+
+# User-specific files
+*.suo
+*.bak
+*.user
+*.swp
+
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Packages
+*.nuget.targets
+*.nuget.props
+
+# Xamarin stuff
+Resource.designer.cs
+EFCoreSampleXamarinForms/EFCoreSampleXamarinForms/EFCoreSampleXamarinForms.Android/Resources/Resources.Designer.cs
