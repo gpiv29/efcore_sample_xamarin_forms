@@ -68,6 +68,8 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\IOSAutofacService.cs" />
+    <Compile Include="Services\FileHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -128,7 +130,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\EFCoreSampleXamarinForms\EFCoreSampleXamarinForms.csproj">
-      <Project>{73E0DE53-FDD3-4DE5-835D-15189D4719DB}</Project>
+      <Project>{A738310F-67E5-4498-9797-85E9A16502A3}</Project>
       <Name>EFCoreSampleXamarinForms</Name>
     </ProjectReference>
   </ItemGroup>

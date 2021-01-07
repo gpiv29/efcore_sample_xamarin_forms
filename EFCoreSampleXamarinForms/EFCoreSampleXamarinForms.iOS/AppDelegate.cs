@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using EFCoreSampleXamarinForms.iOS.Services;
 using Foundation;
 using UIKit;
 
@@ -22,8 +22,9 @@ namespace EFCoreSampleXamarinForms.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            SQLitePCL.Batteries.Init();
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new App(new IOSAutofacService()));
 
             return base.FinishedLaunching(app, options);
         }
