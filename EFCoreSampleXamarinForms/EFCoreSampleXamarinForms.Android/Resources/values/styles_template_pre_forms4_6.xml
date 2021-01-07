@@ -2,8 +2,8 @@
 <resources>
 
   <style name="MainTheme" parent="MainTheme.Base">
-
   </style>
+  <!-- Base theme applied no matter what API -->
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
     <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
     <item name="windowNoTitle">true</item>
@@ -23,6 +23,28 @@
          colorControlHighlight and colorSwitchThumbNormal. -->
     <item name="windowActionModeOverlay">true</item>
 
+    <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
+
+    <item name="android:colorActivatedHighlight">@color/transparent</item>
+    <item name="android:colorFocusedHighlight">@color/transparent</item>
+
+    <item name="android:buttonStyle">@style/NoShadowButton</item>
   </style>
 
+  <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorAccent">#333333</item>
+  </style>
+  
+  <style name="SplashScreen" parent ="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@drawable/splash_screen</item>
+    <!--  Set the actual status bar color during splash screen -->
+    <item name="android:statusBarColor">@color/colorStatusBarDark</item>
+  </style>
+
+  <style name="NoShadowButton" parent="android:style/Widget.Button">
+    <item name="android:stateListAnimator">@null</item>
+    <!--  Some strange fix for android buttons shadow and padding, probably selector was set as background for button by default -->
+    <item name="android:background">#000000</item>
+  </style>
+  
 </resources>

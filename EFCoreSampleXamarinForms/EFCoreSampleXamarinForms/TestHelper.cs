@@ -18,7 +18,7 @@ namespace EFCoreSampleXamarinForms
 		public static async void RunTests()
 		{
 			TruncateDB();
-			await InsertTestData(50000);
+			await InsertTestData(100000);
 
 			await IncludeOptimizedTest();
 
