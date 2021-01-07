@@ -94,6 +94,8 @@ namespace EFCoreSampleXamarinForms
 			}
 
 			Debug.WriteLine($"Finished inserting testmodels: {stopwatch.Elapsed}");
+			var usedMem = System.Diagnostics.Process.GetCurrentProcess().WorkingSet64 / 1024 / 1024;
+			System.Diagnostics.Debug.WriteLine($"Current memory usage: {usedMem} MB");
 		}
 
 		public static async Task<List<TestModel>> IncludeOptimizedTest(){
