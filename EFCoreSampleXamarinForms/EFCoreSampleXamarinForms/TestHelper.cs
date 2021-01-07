@@ -20,7 +20,7 @@ namespace EFCoreSampleXamarinForms
 			TruncateDB();
 			await InsertTestData(50000);
 
-			//await IncludeOptimizedTest();
+			await IncludeOptimizedTest();
 
 			await UpdateFromQueryTest();
 			await UpdateFromQueryAsyncTest();
