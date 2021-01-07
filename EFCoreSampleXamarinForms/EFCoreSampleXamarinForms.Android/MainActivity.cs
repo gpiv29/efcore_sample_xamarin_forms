@@ -31,5 +31,13 @@ namespace EFCoreSampleXamarinForms.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-    }
+
+		protected override void OnResume()
+		{
+			base.OnResume();
+
+            //the memory used by this app
+            System.Diagnostics.Debug.WriteLine($"Current memory usage: {System.Diagnostics.Process.GetCurrentProcess().WorkingSet64 / 1024 / 1024} MB");
+        }
+	}
 }
